@@ -1,0 +1,160 @@
+body {
+  /* Shared page background lives here instead of inside individual sections. */
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at top left, var(--surface-tint) 0%, transparent 28%),
+    linear-gradient(180deg, var(--background) 0%, var(--background-alt) 100%);
+  color: var(--body);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+section {
+  position: relative;
+}
+
+.container {
+  /* Standard content width wrapper used by almost every section. */
+  width: min(calc(100% - 2rem), var(--container-width));
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.42rem 0.82rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--card) 96%, transparent);
+  color: var(--primary);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card) 65%, transparent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  color: var(--heading);
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+  white-space: nowrap;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+.section-copy {
+  max-width: 40rem;
+  color: var(--body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.4rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    background var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base);
+  cursor: pointer;
+}
+
+.button-primary {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 92%, var(--card)), var(--primary));
+  color: var(--card-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  transform: translateY(-2px);
+  background: var(--primary-deep);
+}
+
+.button-secondary {
+  border-color: var(--border-strong);
+  background: color-mix(in srgb, var(--card) 94%, transparent);
+  color: var(--heading);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card) 75%, transparent);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--secondary) 70%, var(--card));
+  outline-offset: 3px;
+}
+
+@media (max-width: 639px) {
+  .container {
+    width: min(calc(100% - 1.5rem), var(--container-width));
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2.4rem);
+    line-height: 1.05;
+  }
+
+  .section-copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .button-primary,
+  .button-secondary {
+    min-height: 3rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .container {
+    width: min(calc(100% - 2.5rem), var(--container-width));
+  }
+
+  .button-primary,
+  .button-secondary {
+    min-height: 3.2rem;
+    padding: 0.85rem 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: min(calc(100% - 3rem), var(--container-width));
+  }
+
+  .button-primary,
+  .button-secondary {
+    min-height: 3.4rem;
+    padding: 0.9rem 1.4rem;
+  }
+}

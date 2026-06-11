@@ -1,0 +1,43 @@
+:root {
+  /* Change brand colors here to retheme the whole site without touching components. */
+  --primary: #155e59;
+  --primary-deep: #113f3d;
+  --secondary: #f0a265;
+  --secondary-soft: #f7d7bd;
+  --accent-berry: #95506a;
+  --background: #fffdf9;
+  --background-alt: #f8f3eb;
+  --background-strong: #efe5d6;
+  --heading: #183432;
+  --body: #58625f;
+  --body-muted: #7a817d;
+  --card: #fffefb;
+  --card-strong: #ffffff;
+  --border: #e7ddd0;
+  --border-strong: #d5c5b3;
+  --success: #3f7a5a;
+  --shadow-color: color-mix(in srgb, var(--primary-deep) 10%, transparent);
+  --shadow-strong: color-mix(in srgb, var(--primary-deep) 18%, transparent);
+  --overlay: color-mix(in srgb, var(--card) 82%, transparent);
+  --overlay-strong: color-mix(in srgb, var(--card) 68%, var(--primary-deep));
+  --surface-tint: color-mix(in srgb, var(--secondary-soft) 52%, transparent);
+  --surface-leaf: color-mix(in srgb, var(--primary) 12%, transparent);
+  --surface-berry: color-mix(in srgb, var(--accent-berry) 10%, transparent);
+  --surface-white: color-mix(in srgb, var(--card) 90%, transparent);
+  --surface-line: color-mix(in srgb, var(--primary) 8%, var(--card));
+  --star: #f6bf4d;
+  --container-width: 1280px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 44px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 12px 26px var(--shadow-color);
+  --shadow-md: 0 24px 58px var(--shadow-color);
+  --shadow-lg: 0 34px 88px var(--shadow-strong);
+  --transition-base: 220ms ease;
+  --transition-slow: 420ms ease;
+  /* Display/body fonts are also centralized so typography can be swapped globally. */
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+  --font-body: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
