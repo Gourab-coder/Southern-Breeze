@@ -2,10 +2,8 @@ import originalImage from '../assets/images/products/original.webp';
 import peachImage from '../assets/images/products/peach.webp';
 import blackberryImage from '../assets/images/products/blackberry.webp';
 import raspberryImage from '../assets/images/products/raspberry.webp';
-import featuredImage from '../assets/images/hero/hero-peach.webp';
 import type { Product } from '../types/Product';
 
-// Product cards read from this array so the showcase component stays presentational.
 export const products: Product[] = [
   {
     id: 'original',
@@ -14,7 +12,7 @@ export const products: Product[] = [
     badge: 'Classic Brew',
     image: originalImage,
     alt: 'Southern Breeze original sweet tea bottle.',
-    accent: 'var(--primary)',
+    accent: 'var(--amber)',
   },
   {
     id: 'peach',
@@ -23,7 +21,7 @@ export const products: Product[] = [
     badge: 'Fan Favorite',
     image: peachImage,
     alt: 'Southern Breeze peach sweet tea bottle.',
-    accent: 'var(--secondary)',
+    accent: 'var(--amber)',
   },
   {
     id: 'blackberry',
@@ -32,7 +30,7 @@ export const products: Product[] = [
     badge: 'Berry Rich',
     image: blackberryImage,
     alt: 'Southern Breeze blackberry sweet tea bottle.',
-    accent: 'var(--accent-berry)',
+    accent: 'var(--pink)',
   },
   {
     id: 'raspberry',
@@ -41,17 +39,6 @@ export const products: Product[] = [
     badge: 'Fresh Pick',
     image: raspberryImage,
     alt: 'Southern Breeze raspberry sweet tea bottle.',
-    accent: 'var(--secondary-soft)',
+    accent: 'var(--cyan)',
   },
 ];
-
-// Featured product uses a separate object because its layout is different from the card grid.
-export const featuredProduct = {
-  eyebrow: 'Featured Flavor',
-  title: 'Peach Cold Brew Tea',
-  description:
-    'Designed for easy iced tea rituals, this bright peach blend balances orchard fruit, smooth black tea, and a mellow sweetness that tastes handcrafted from the very first sip.',
-  ctaLabel: 'Taste Peach',
-  image: featuredImage,
-  alt: 'Featured Southern Breeze peach tea bottle in a premium product spotlight.',
-};
