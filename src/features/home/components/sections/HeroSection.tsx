@@ -32,21 +32,21 @@ export function HeroSection({
     <section className={styles.hero} id="home" ref={heroRef}>
       <div className={styles.heroGrid}>
         <motion.div className={styles.heroCopy} style={{ y: heroCopyY }}>
-          <span className={styles.eyebrow}>Awwwards-level brand refresh</span>
+          <span className={styles.eyebrow}>Naturally Sweetened Southern Tea</span>
           <h1 className={styles.heroTitle} ref={titleRef}>
             {headingWords.map((word) => (
               <span key={word}>{word}</span>
             ))}
           </h1>
           <p className={styles.heroLead} ref={introRef}>
-            Premium tea now arrives in a neon-drenched, glassmorphic world that feels bold,
-            editorial, and unmistakably alive across every breakpoint.
+            Enjoy the refreshing taste of Southern Breeze Sweet Tea, crafted with real tea and
+            naturally sweetened for the perfect balance of flavor and comfort in every sip.
           </p>
           <div className={styles.heroActions} ref={actionsRef}>
-            <MagneticButton href="#flavors" label="Explore the Flavors" />
+            <MagneticButton href="#/flavors" label="Shop Flavors" />
             <MagneticButton
-              href="#experience"
-              label="See the Experience"
+              href="#/contact"
+              label="Find a Store"
               variant="secondary"
             />
           </div>
@@ -72,8 +72,8 @@ export function HeroSection({
           <div className={styles.heroVisual}>
             <div className={styles.visualCardLarge}>
               <div className={styles.visualLabel}>
-                <span>Signature Launch</span>
-                <strong>Peach Electric</strong>
+                <span>Fan Favorite</span>
+                <strong>Meet Peach Tea</strong>
               </div>
               <img
                 src={products[1].image}
@@ -92,7 +92,7 @@ export function HeroSection({
                 ease: 'easeInOut',
               }}
             >
-              <span>Berry Glow</span>
+              <span>Summer Favorite</span>
               <img
                 src={products[2].image}
                 alt={products[2].alt}
@@ -109,7 +109,7 @@ export function HeroSection({
                 ease: 'easeInOut',
               }}
             >
-              <p>Immersive motion, luminous surfaces, and conversion-first rhythm.</p>
+              <p>Bright peach flavor and smooth brewed tea for sunny afternoons and easy moments.</p>
             </motion.div>
           </div>
         </motion.div>
@@ -117,12 +117,12 @@ export function HeroSection({
 
       <motion.a
         className={styles.scrollCue}
-        href="#flavors"
+        href="#/flavors"
         animate={prefersReducedMotion ? undefined : { y: [0, 10, 0] }}
         transition={{ duration: 2.4, repeat: Number.POSITIVE_INFINITY }}
       >
         <span />
-        Scroll to discover
+        See the flavors
       </motion.a>
     </section>
   );

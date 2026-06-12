@@ -1,6 +1,6 @@
-import amyImage from '../assets/images/testimonials/amy.webp';
-import jamesImage from '../assets/images/testimonials/james.webp';
-import ninaImage from '../assets/images/testimonials/nina.webp';
+import amyImage from '../assets/images/testimonials/amy-removebg-preview.png';
+import jamesImage from '../assets/images/testimonials/james-removebg-preview.png';
+import ninaImage from '../assets/images/testimonials/nina-removebg-preview.png';
 import type { Testimonial } from '../types/Testimonial';
 
 export const testimonials: Testimonial[] = [
@@ -8,7 +8,7 @@ export const testimonials: Testimonial[] = [
     id: 'amy',
     name: 'Amy Caldwell',
     location: 'Savannah, Georgia',
-    quote: 'It tastes like a polished version of the sweet tea I grew up with. Smooth, light, and never syrupy.',
+    quote: "The Peach Tea tastes just like summer in a glass. It's become my go-to drink for family gatherings.",
     image: amyImage,
     alt: 'Southern Breeze blackberry tea bottle representing Amy Caldwell testimonial.',
   },
@@ -16,7 +16,7 @@ export const testimonials: Testimonial[] = [
     id: 'james',
     name: 'James Porter',
     location: 'Nashville, Tennessee',
-    quote: 'We stocked it for brunch service and guests kept asking where they could buy a bottle for home.',
+    quote: 'Perfect balance of sweetness and tea flavor. Refreshing without being overwhelming.',
     image: jamesImage,
     alt: 'Southern Breeze peach tea bottle representing James Porter testimonial.',
   },
@@ -24,7 +24,7 @@ export const testimonials: Testimonial[] = [
     id: 'nina',
     name: 'Nina Brooks',
     location: 'Charleston, South Carolina',
-    quote: 'The flavor feels nostalgic, but the finish is fresh and modern. Peach is permanently in my fridge now.',
+    quote: 'Southern Breeze brings back memories of homemade sweet tea, but with amazing convenience.',
     image: ninaImage,
     alt: 'Southern Breeze raspberry tea bottle representing Nina Brooks testimonial.',
   },

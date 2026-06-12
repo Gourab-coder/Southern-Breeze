@@ -26,11 +26,11 @@ export function ContactSection({
     >
       <div className={styles.contactPanel}>
         <div className={styles.sectionHeading}>
-          <span className={styles.eyebrow}>High-conviction close</span>
-          <h2>Invite people into the next launch, drop, or tasting moment.</h2>
+          <span className={styles.eyebrow}>Stay connected</span>
+          <h2>Stay connected to the sweet side of life.</h2>
           <p>
-            The signup surface keeps the same glass glow language while giving the form clear
-            feedback and a confident final call to action.
+            Be the first to hear about new flavors, seasonal favorites, recipes, and special
+            offers from Southern Breeze.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export function ContactSection({
             <input
               type="email"
               name="email"
-              placeholder="you@example.com"
+              placeholder="Enter your email address"
               value={email}
               onChange={onEmailChange}
               required
@@ -48,7 +48,7 @@ export function ContactSection({
           </label>
 
           <button className={styles.submitButton} type="submit">
-            Join the Launch List
+            Join the Southern Breeze Family
           </button>
 
           <AnimatePresence mode="wait">
@@ -60,7 +60,7 @@ export function ContactSection({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
               >
-                You're on the list for the next Southern Breeze drop.
+                You're in. We'll keep you posted with fresh tea news, recipes, and special offers.
               </motion.p>
             ) : (
               <motion.p
@@ -70,7 +70,7 @@ export function ContactSection({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
               >
-                Product launches, retail news, and immersive campaign previews.
+                New flavors, seasonal favorites, and sweet tea inspiration delivered with care.
               </motion.p>
             )}
           </AnimatePresence>

@@ -5,10 +5,11 @@ import { gsap } from 'gsap';
 import styles from '../homeStyles.module.css';
 
 type MagneticButtonProps = {
-  href: string;
+  href?: string;
   label: string;
   variant?: 'primary' | 'secondary';
   className?: string;
+  onClick?: () => void;
 };
 
 export function MagneticButton({

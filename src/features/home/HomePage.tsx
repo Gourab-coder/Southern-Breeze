@@ -9,7 +9,6 @@ import {
   useTransform,
 } from 'framer-motion';
 import styles from './homeStyles.module.css';
-import { navLinks } from './homeContent';
 import { BackgroundCanvas } from './components/BackgroundCanvas';
 import { SiteHeader } from './components/SiteHeader';
 import { ContactSection } from './components/sections/ContactSection';
@@ -18,7 +17,6 @@ import { FlavorsSection } from './components/sections/FlavorsSection';
 import { HeroSection } from './components/sections/HeroSection';
 import { JournalSection } from './components/sections/JournalSection';
 import { ReviewsSection } from './components/sections/ReviewsSection';
-import { useActiveSection } from './hooks/useActiveSection';
 import { useHeroIntroAnimation } from './hooks/useHeroIntroAnimation';
 
 export function HomePage() {
@@ -33,7 +31,6 @@ export function HomePage() {
   const actionsRef = useRef<HTMLDivElement | null>(null);
   const visualRef = useRef<HTMLDivElement | null>(null);
 
-  const activeSection = useActiveSection(navLinks);
   const pointerX = useMotionValue(0);
   const pointerY = useMotionValue(0);
   const auraX = useSpring(pointerX, { stiffness: 170, damping: 28, mass: 0.25 });
@@ -114,7 +111,7 @@ export function HomePage() {
       <BackgroundCanvas />
 
       <SiteHeader
-        activeSection={activeSection}
+        activeSection="home"
         menuOpen={menuOpen}
         onCloseMenu={() => setMenuOpen(false)}
         onToggleMenu={() => setMenuOpen((current) => !current)}

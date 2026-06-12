@@ -1,54 +1,45 @@
-export const navLinks = [
-  { id: 'home', href: '#home', label: 'Home' },
-  { id: 'flavors', href: '#flavors', label: 'Flavors' },
-  { id: 'experience', href: '#experience', label: 'Experience' },
-  { id: 'reviews', href: '#reviews', label: 'Reviews' },
-  { id: 'journal', href: '#journal', label: 'Journal' },
-  { id: 'contact', href: '#contact', label: 'Contact' },
-] as const;
-
-export const headingWords = ['Southern', 'Breeze', 'Feels', 'Like', 'Summer,', 'Amplified'];
+export const headingWords = ['Sweet', 'Tea', 'Moments,', 'Made', 'Simple.'];
 
 export const heroMetrics = [
-  { value: '4', label: 'signature infusions' },
-  { value: '12k+', label: 'host tables refreshed' },
-  { value: '98%', label: 'repeat purchase intent' },
+  { value: '40+', label: 'years of Southern tea tradition' },
+  { value: '100%', label: 'naturally sweetened' },
+  { value: '4', label: 'delicious flavors' },
 ];
 
 export const featureCards = [
   {
-    title: 'Motion-led storytelling',
-    copy: 'Every section shifts the eye with scroll choreography, kinetic type, and layered depth.',
+    title: 'Naturally sweetened',
+    copy: 'Made with natural sweeteners so you can enjoy sweetness without giving up the smooth taste you love.',
     tone: 'cyan',
   },
   {
-    title: 'Porch ritual, reimagined',
-    copy: 'Southern nostalgia meets premium product framing, rich lighting, and editorial pacing.',
+    title: 'Brewed tea taste',
+    copy: 'Every flavor starts with real brewed tea for that familiar Southern refreshment in every glass.',
     tone: 'peach',
   },
   {
-    title: 'Built for conversion',
-    copy: 'Clear hierarchy, magnetic calls to action, and intentional pauses guide the next click.',
+    title: 'Ready for every occasion',
+    copy: 'Perfect for family meals, porch conversations, picnics, celebrations, and easy everyday moments.',
     tone: 'pink',
   },
   {
-    title: 'Performance-minded glow',
-    copy: 'GPU-friendly transforms, lazy media, and reduced-motion fallbacks keep the experience polished.',
+    title: 'Refreshingly smooth',
+    copy: 'A clean, balanced finish keeps every sip light, easy, and worth coming back to.',
     tone: 'lime',
   },
 ] as const;
 
 export const experienceSteps = [
   {
-    title: 'Start with a cinematic first fold',
-    copy: 'A layered hero, aurora gradients, floating particles, and animated bottle stack create immediate recall.',
+    title: 'Pick your flavor',
+    copy: 'Choose from classic Southern sweet tea and fruit-infused favorites to match your mood.',
   },
   {
-    title: 'Let scroll reveal the product story',
-    copy: 'Parallax, staggered cards, and asymmetrical sections turn each flavor into a moment instead of a tile.',
+    title: 'Chill and pour',
+    copy: 'Serve it ice cold for the kind of refreshing taste that makes warm days feel easier.',
   },
   {
-    title: 'Finish with warmth and momentum',
-    copy: 'Testimonials, journal teasers, and a tactile signup panel close the loop with trust and action.',
+    title: 'Share the moment',
+    copy: 'Enjoy it with friends, family, or during a quiet break that feels just a little more special.',
   },
 ];

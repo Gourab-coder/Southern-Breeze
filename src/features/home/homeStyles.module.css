@@ -610,6 +610,12 @@
   letter-spacing: -0.05em;
 }
 
+.sectionActionRow {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
 .flavorGrid,
 .reviewGrid,
 .journalGrid {
@@ -649,7 +655,7 @@
 }
 
 .flavorCard:hover .flavorBottle {
-  transform: translateY(-6px) rotate(-2deg) scale(1.04);
+  transform: translateY(-10px) rotate(-2deg) scale(1.05);
 }
 
 .flavorCardWide {
@@ -670,7 +676,12 @@
 .flavorMeta {
   position: relative;
   z-index: 1;
-  max-width: 18rem;
+  max-width: min(18rem, calc(100% - 11rem));
+  padding-right: 0.5rem;
+}
+
+.flavorCardWide .flavorMeta {
+  max-width: min(22rem, 46%);
 }
 
 .flavorMeta strong {
@@ -682,12 +693,32 @@
   letter-spacing: -0.05em;
 }
 
-.flavorBottle {
+.flavorVisual {
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  width: 48%;
-  height: auto;
+  right: 1rem;
+  bottom: 1rem;
+  width: min(34%, 12rem);
+  height: min(15rem, calc(100% - 5.5rem));
+  display: grid;
+  place-items: center;
+  border-radius: 1.6rem;
+  background:
+    radial-gradient(circle at 50% 34%, color-mix(in srgb, var(--accent) 22%, white) 0%, transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 18px 32px rgba(0, 0, 0, 0.14);
+}
+
+.flavorCardWide .flavorVisual {
+  width: min(28%, 12.5rem);
+  height: min(16rem, calc(100% - 5rem));
+}
+
+.flavorBottle {
+  width: 82%;
+  height: 82%;
+  object-position: center bottom;
 }
 
 .featureSection {
@@ -794,6 +825,8 @@
 }
 
 .reviewCard {
+  position: relative;
+  overflow: hidden;
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.8rem;
@@ -806,12 +839,29 @@
   border-color: rgba(255, 255, 255, 0.16);
 }
 
-.reviewImage {
-  width: 3.6rem;
-  height: 3.6rem;
-  object-fit: cover;
-  border-radius: 1.2rem;
+.reviewImageFrame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 6rem;
+  height: 7.25rem;
   margin-bottom: 1.2rem;
+  border-radius: 1.6rem;
+  background:
+    radial-gradient(circle at 50% 24%, color-mix(in srgb, var(--review-accent) 34%, white) 0%, transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 18px 32px rgba(0, 0, 0, 0.16);
+}
+
+.reviewImage {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+  object-position: center bottom;
+  margin-bottom: 0;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.2));
 }
 
 .reviewCard strong,
@@ -838,42 +888,56 @@
 
 .journalCard {
   position: relative;
-  min-height: 29rem;
+  display: grid;
+  grid-template-rows: minmax(16rem, 19rem) auto;
+  min-height: 0;
   overflow: hidden;
   border-radius: 2rem;
   isolation: isolate;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
 }
 
 .journalCard:hover .journalImage {
-  transform: scale(1.08);
+  transform: translateY(-4px) scale(1.03);
 }
 
-.journalImage,
-.journalOverlay,
-.journalCopy {
-  position: absolute;
-  inset: 0;
+.journalMedia {
+  position: relative;
+  min-height: 16rem;
+  padding: 1.4rem 1.4rem 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.12), transparent 42%),
+    linear-gradient(180deg, rgba(23, 32, 67, 0.5), rgba(10, 14, 33, 0.2));
 }
 
 .journalImage {
-  width: 100%;
+  position: relative;
+  z-index: 1;
+  width: min(78%, 22rem);
   height: 100%;
-  object-fit: cover;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center bottom;
   transition: transform 440ms ease;
 }
 
 .journalOverlay {
+  position: absolute;
+  inset: 0;
   background:
-    linear-gradient(180deg, transparent 28%, rgba(6, 8, 22, 0.85) 100%),
-    linear-gradient(120deg, rgba(20, 28, 64, 0.3), rgba(255, 90, 176, 0.06));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 36%, rgba(6, 8, 22, 0.28) 100%),
+    linear-gradient(120deg, rgba(20, 28, 64, 0.18), rgba(255, 90, 176, 0.04));
 }
 
 .journalCopy {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-start;
   gap: 0.8rem;
-  padding: 1.6rem;
+  padding: 1.5rem 1.6rem 1.8rem;
 }
 
 .journalCopy strong {
@@ -1151,8 +1215,13 @@
     min-height: 19rem;
   }
 
-  .flavorBottle {
-    width: 42%;
+  .flavorVisual {
+    width: min(32%, 10.5rem);
+    height: min(13rem, calc(100% - 4.5rem));
+  }
+
+  .flavorCardWide .flavorMeta {
+    max-width: min(20rem, 52%);
   }
 }
 
@@ -1205,6 +1274,27 @@
 
   .sectionHeading h2 {
     font-size: clamp(1.9rem, 10vw, 2.8rem);
+  }
+
+  .flavorMeta,
+  .flavorCardWide .flavorMeta {
+    max-width: calc(100% - 8.5rem);
+  }
+
+  .flavorVisual,
+  .flavorCardWide .flavorVisual {
+    width: 7.5rem;
+    height: 10rem;
+    right: 0.8rem;
+    bottom: 0.8rem;
+  }
+
+  .journalCard {
+    grid-template-rows: minmax(13rem, 15rem) auto;
+  }
+
+  .journalImage {
+    width: min(86%, 18rem);
   }
 }
 

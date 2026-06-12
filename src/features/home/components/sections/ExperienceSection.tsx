@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { experienceSteps, featureCards } from '../../homeContent';
 import styles from '../../homeStyles.module.css';
+import { MagneticButton } from '../MagneticButton';
 
 const toneClassMap = {
   cyan: styles.toneCyan,
@@ -22,8 +23,12 @@ export function ExperienceSection() {
       transition={{ duration: 0.8 }}
     >
       <div className={styles.sectionHeading}>
-        <span className={styles.eyebrow}>Layered experience design</span>
-        <h2>Each section pushes attention forward without overwhelming the user.</h2>
+        <span className={styles.eyebrow}>Why Southern Breeze</span>
+        <h2>Real tea. Naturally sweet. Always refreshing.</h2>
+        <p>
+          Southern Breeze is made for easy moments that still deserve great flavor, whether
+          you're gathering with family or relaxing on the porch.
+        </p>
       </div>
 
       <div className={styles.bentoGrid}>
@@ -60,6 +65,10 @@ export function ExperienceSection() {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      <div className={styles.sectionActionRow}>
+        <MagneticButton href="#/experience" label="Why You'll Love It" />
       </div>
     </motion.section>
   );

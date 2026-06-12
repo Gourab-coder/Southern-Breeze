@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { products } from '../../../../data/products';
 import styles from '../../homeStyles.module.css';
+import { MagneticButton } from '../MagneticButton';
 
 export function FlavorsSection() {
   const prefersReducedMotion = useReducedMotion();
@@ -16,11 +17,11 @@ export function FlavorsSection() {
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <div className={styles.sectionHeading}>
-        <span className={styles.eyebrow}>Bento product system</span>
-        <h2>Flavor cards with depth, contrast, and motion-driven hierarchy.</h2>
+        <span className={styles.eyebrow}>Explore Our Flavors</span>
+        <h2>A sweet tea for every mood.</h2>
         <p>
-          The lineup now lives in an asymmetrical showcase that feels premium on desktop and
-          remains thumb-friendly on mobile.
+          From fruity favorites to classic Southern refreshment, discover the flavor that fits
+          your moment.
         </p>
       </div>
 
@@ -43,14 +44,23 @@ export function FlavorsSection() {
               <strong>{product.name}</strong>
               <p>{product.description}</p>
             </div>
-            <img
-              src={product.image}
-              alt={product.alt}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              className={styles.flavorBottle}
-            />
+            <div
+              className={styles.flavorVisual}
+              style={{ '--accent': product.accent } as CSSProperties}
+            >
+              <img
+                src={product.image}
+                alt={product.alt}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                className={styles.flavorBottle}
+              />
+            </div>
           </motion.article>
         ))}
+      </div>
+
+      <div className={styles.sectionActionRow}>
+        <MagneticButton href="#/flavors" label="See All Flavors" />
       </div>
     </motion.section>
   );

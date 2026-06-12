@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { blogPosts } from '../../../../data/blog';
 import styles from '../../homeStyles.module.css';
+import { MagneticButton } from '../MagneticButton';
 
 export function JournalSection() {
   const prefersReducedMotion = useReducedMotion();
@@ -15,8 +16,12 @@ export function JournalSection() {
       transition={{ duration: 0.8 }}
     >
       <div className={styles.sectionHeading}>
-        <span className={styles.eyebrow}>Journal showcase</span>
-        <h2>Storytelling blocks extend the brand beyond product shots.</h2>
+        <span className={styles.eyebrow}>Tea inspiration</span>
+        <h2>Tea inspiration for everyday moments.</h2>
+        <p>
+          Discover simple ways to bring more Southern charm, refreshment, and easy hospitality
+          into your table and your day.
+        </p>
       </div>
 
       <div className={styles.journalGrid}>
@@ -30,8 +35,15 @@ export function JournalSection() {
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.7, delay: index * 0.1 }}
           >
-            <img src={post.image} alt={post.alt} loading="lazy" className={styles.journalImage} />
-            <div className={styles.journalOverlay} />
+            <div className={styles.journalMedia}>
+              <img
+                src={post.image}
+                alt={post.alt}
+                loading="lazy"
+                className={styles.journalImage}
+              />
+              <div className={styles.journalOverlay} />
+            </div>
             <div className={styles.journalCopy}>
               <span>Read feature</span>
               <strong>{post.title}</strong>
@@ -39,6 +51,10 @@ export function JournalSection() {
             </div>
           </motion.a>
         ))}
+      </div>
+
+      <div className={styles.sectionActionRow}>
+        <MagneticButton href="#/journal" label="Read More Stories" />
       </div>
     </motion.section>
   );

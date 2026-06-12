@@ -1,22 +1,22 @@
-import brunchImage from '../assets/images/blog/summer-brunch.webp';
-import pantryImage from '../assets/images/blog/porch-pantry.webp';
+import brunchImage from '../assets/images/blog/summer-brunch.png';
+import pantryImage from '../assets/images/blog/porch-pantry.png';
 import type { BlogPost } from '../types/Blog';
 
 export const blogPosts: BlogPost[] = [
   {
     id: 'brunch',
-    title: 'How To Build A Southern Brunch Table Around Iced Tea',
-    excerpt: 'Simple pairings, polished serving ideas, and a few hosting touches that make the whole spread feel special.',
+    title: 'Create The Perfect Southern Brunch With Sweet Tea',
+    excerpt: 'Simple ideas for bringing Southern hospitality, refreshing pours, and easy charm to your table.',
     image: brunchImage,
     alt: 'Peach tea bottle used as a visual for a Southern brunch article.',
-    href: '#contact',
+    href: '#/journal',
   },
   {
     id: 'pantry',
-    title: 'Five Pantry Staples That Elevate Porch-Worthy Tea Moments',
-    excerpt: 'From citrus slices to textured glassware, these details turn an everyday pour into an easy ritual.',
+    title: 'Five Easy Ways To Enjoy Sweet Tea This Summer',
+    excerpt: 'Refreshing serving ideas for warm afternoons, outdoor gatherings, and those easy summer moments.',
     image: pantryImage,
     alt: 'Original tea bottle used as a visual for a pantry styling article.',
-    href: '#contact',
+    href: '#/journal',
   },
 ];

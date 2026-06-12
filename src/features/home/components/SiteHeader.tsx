@@ -1,5 +1,5 @@
 import logo from '../../../assets/images/logo/southern-breeze-logo.png';
-import { navLinks } from '../homeContent';
+import { navLinks } from '../../site/routes';
 import styles from '../homeStyles.module.css';
 import { MagneticButton } from './MagneticButton';
 
@@ -19,7 +19,7 @@ export function SiteHeader({
   return (
     <header className={`${styles.navbar} ${menuOpen ? styles.navbarOpen : ''}`}>
       <div className={styles.navInner}>
-        <a className={styles.brand} href="#home" aria-label="Southern Breeze home">
+        <a className={styles.brand} href="#/" aria-label="Southern Breeze home">
           <img className={styles.brandMark} src={logo} alt="Southern Breeze logo" />
           <div>
             <strong>Southern Breeze</strong>
@@ -51,7 +51,7 @@ export function SiteHeader({
           ))}
         </nav>
 
-        <MagneticButton href="#contact" label="Pour Into Launch" className={styles.navCta} />
+        <MagneticButton href="https://southernbreezesweettea.com" label="Find a Store" className={styles.navCta} />
       </div>
     </header>
   );
