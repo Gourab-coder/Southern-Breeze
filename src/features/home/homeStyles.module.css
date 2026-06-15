@@ -548,7 +548,14 @@
   letter-spacing: -0.04em;
 }
 
-.heroBottleMain,
+.heroBottleMain {
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 52px rgba(0, 0, 0, 0.28));
+  transition: transform 320ms ease;
+  will-change: transform;
+}
 .heroBottleSide,
 .flavorBottle {
   width: 100%;
